@@ -1,0 +1,40 @@
+.popup {
+  position: fixed;
+  top: 10%;
+  left: 25%;
+  width: 50%;
+  padding: 20px;
+  background: #fef7e6;
+  border: 1px solid orange;
+  border-radius: 4px;
+  z-index: 99999;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.popup-fade:before {
+  content: "";
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 9999;
+}
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 20px;
+}
+input {
+  margin-top: 20px;
+}

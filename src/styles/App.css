@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+}
+.form {
+  align-self: center;
+  padding: 10px;
+  background-color: rgb(35, 34, 34);
+  width: 100%;
+  height: 50px;
+}
+.name {
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+  padding: 10px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.App .column {
+  padding: 10px;
+  height: 100%;
+}
+.droppable-col {
+  width: 100%;
+  min-height: calc(100vh - 117px);
+
+  background-color: rgb(35, 34, 34);
+  padding: 10px 10px 10px 10px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  margin-bottom: 10px;
+  background-color: gray;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.item.dragging {
+  background-color: coral;
+  height: 20px;
+}
+
+.deleteBtn {
+  color: black;
+  align-self: flex-end;
+  text-align: center;
+  background: #dd0530;
+  border: 0.1875em solid #0f1c3f;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+.panel {
+  background: #fef7e6;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 10px;
+  color: black;
+  padding: 4px;
+  justify-content: space-between;
+}
+
+.df {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+span {
+  text-transform: uppercase;
+}
+
+.editBtn {
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.spinnerStyle {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: none;
+  display: grid;
+  place-items: center center;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
