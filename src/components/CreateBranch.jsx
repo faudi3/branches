@@ -64,7 +64,15 @@ const CreateBranch = ({ close, fetchData, state, setState }) => {
           <List
             names={names}
             label="Author"
-            onChange={(v) => updateData(v.target.value, "author")}
+            onChange={(v) => {
+              updateData(v.target.value, "author");
+
+              const reviewer = names.find(
+                (name) => data.author !== name && v.target.value !== name
+              );
+              updateData(reviewer, "reviewer");
+              updateData(reviewer, "board");
+            }}
           />
           <List
             names={names.filter((name) => data.author !== name)}

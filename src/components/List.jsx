@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/list.css";
 
-function DropdownList({ names, onChange, label }) {
+function DropdownList({ names, onChange, label, value }) {
   return (
     <div className="list">
       <p className="label">{label}</p>
